@@ -1,3 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Web GBA Emulator</title>
+  <link rel="stylesheet" href="controls.css">
+</head>
+<body>
+
+<h1>GBA Emulator</h1>
+
+<input type="file" id="rom" accept=".gba">
+<button onclick="saveState()">Save</button>
+<button onclick="loadState()">Load</button>
+
+<br><br>
+
+<canvas id="screen" width="240" height="160"></canvas>
+
+<!-- On-screen controls -->
+<div id="controls">
+  <div class="dpad">
+    <button data-key="UP">▲</button>
+    <div>
+      <button data-key="LEFT">◀</button>
+      <button data-key="RIGHT">▶</button>
+    </div>
+    <button data-key="DOWN">▼</button>
+  </div>
+
+  <div class="buttons">
+    <button data-key="A">A</button>
+    <button data-key="B">B</button>
+  </div>
+</div>
+
+<!-- Emulator core -->
 <script src="core/mgba.js"></script>
 <script src="app.js"></script>
+
+</body>
+</html>
 
